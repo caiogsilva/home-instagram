@@ -11,7 +11,7 @@
 #main-container {
     display: flex;
     flex-direction: row;
-    margin-top: 30px;
+    margin-top: 100px;
 }
 
 #banner-container,
@@ -24,6 +24,7 @@
     text-align: right;
 }
 
+/*Distância da img para o form login (-15px img org e 20px img iphone12)*/
 #banner-container img {
     margin-right: -15px;
 }
@@ -68,35 +69,35 @@
     font-size: 13px;
     padding: 0;
     font-weight: bold;
-
 }
 
-.separator{
+.separator {
     position: relative;
 }
 
-.line{
+.line {
     border-top: 1px solid #dbdbdb;
     width: 268px;
     margin: 25px auto 35px auto;
 }
 
-.separator span{
+.separator span {
     position: absolute;
     text-transform: uppercase;
-    color: #bbb;
-    top: -6;
+    color: #999;
+    top: -6px;
     left: 50%;
     margin-left: -25px;
-    width: 30px;
+    width: 50px;
     font-size: 14px;
+    background-color: white;
 }
 
-#facebook-login{
+#facebook-login {
     margin-bottom: 25px;
 }
 
-#facebook-login a{
+#facebook-login a {
     text-decoration: none;
     color: #385185;
     display: flex;
@@ -104,8 +105,146 @@
     justify-content: center;
 }
 
-#facebook-login img{
+#facebook-login img {
     width: 16px;
     height: 16px;
     margin-right: 8px;
+}
+
+#facebook-login span {
+    font-weight: bold;
+    font-size: 13px;
+    margin-top: 1px;
+}
+
+/*Esqueceu a senha*/
+#forgot-pass {
+    margin-bottom: 20px;
+    font-size: 12px;
+}
+
+#forgot-pass a {
+    text-decoration: none;
+    color: #385185;
+}
+
+/*Chamada Cadastro*/
+#register-container {
+    background-color: #ffff;
+    border: 1px solid #dbdbdb;
+    width: 350px;
+    margin-top: 10px;
+    padding: 25px;
+}
+
+#register-container p {
+    font-size: 14px;
+    color: #262626;
+}
+
+#register-container a {
+    text-decoration: none;
+    color: #4a95f6;
+    font-weight: bold;
+}
+
+/*Obter o App*/
+#get-app-container {
+    text-align: center;
+    width: 350px;
+}
+
+#get-app-container p {
+    margin: 20px 0;
+    font-size: 13px;
+}
+
+#get-app-container a {
+    text-decoration: none;
+}
+
+#get-app-container img {
+    width: 136px;
+    height: 40px;
+}
+
+/*Rodapé*/
+footer {
+    text-align: left;
+    width: 1000px;
+    margin: 50px auto;
+}
+
+footer nav {
+    display: inline-block;
+}
+
+footer #footer-links li {
+    display: inline-block;
+    text-transform: uppercase;
+    margin-right: 10px;
+}
+
+footer #footer-links {
+    list-style: none;
+}
+
+footer #footer-links a {
+    text-decoration: none;
+    color: #8e8e8e;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+#copyright {
+    font-size: 12px;
+    text-transform: uppercase;
+    color: #8e8e8e;
+    margin-top: 10px;
+    text-align: center;
+}
+
+
+/*MOBILE*/
+
+@media(max-width:875px) {
+    #banner-container {
+        display: none;
+    }
+
+    #main-container{
+        margin-left: 30%;
+    }
+}
+
+@media(max-width:450px) {
+    #banner-container {
+        display: none;
+    }
+
+    #main-container{
+        margin-left: 0;
+    }
+    
+    #main-container,
+    #form-box {
+        margin-top: 0;
+    }
+
+    #form-container,
+    #form-box,
+    #register-container,
+    #get-app-container {
+        width: 100%;
+        border: none;
+    }
+
+    footer {
+        width: 90%;
+        text-align: center;
+    }
+
+    #footer-links li {
+        margin-bottom: 10px;
+    }
 }
